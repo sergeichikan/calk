@@ -2,6 +2,14 @@ import { createServer, Server, IncomingMessage, ServerResponse } from "http";
 import { promises } from "fs";
 
 // npm i
+// File -> Settings -> Languages... -> TypeScript -> Recompile on changes -> Apply
+
+// Запуск сервера:
+// node ./src/index.js
+
+// http://localhost:3000/
+
+// не надо:
 // npm i --save-dev @types/node
 
 const server = createServer();

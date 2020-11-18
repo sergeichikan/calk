@@ -1,13 +1,10 @@
 const sendButton = document.getElementById("sendButton");
 
-console.log(sendButton);
-
-sendButton.addEventListener("click", () => {
-    fetch("http://localhost:3000/sendButton", {
+sendButton.addEventListener("click", async () => {
+    const res = await fetch("/sendButton", {
         method: "POST",
         body: "text body data wedrwe fdgdfgdf dfgdfg dfgdfgdfgfdgdf dfgdfgd dfgdfgdfgd dfgdfgdgfd",
-    })
-        .then(() => {
-            //
-        });
+    });
+    const body = await res.text();
+    console.log(body);
 });

@@ -43,6 +43,8 @@ server.on("request", async (req: IncomingMessage, res: ServerResponse) => {
     }
     if (req.method === "POST") {
         const body: string = await getRawBody(req);
+        const result = JSON.parse(body);
+        console.log(result);
         res.end(body);
     }
 });
